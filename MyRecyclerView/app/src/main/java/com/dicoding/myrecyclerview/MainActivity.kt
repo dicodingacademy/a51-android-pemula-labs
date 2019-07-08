@@ -12,7 +12,7 @@ import android.widget.Toast
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rvCategory: RecyclerView
+    private lateinit var rvHeroes: RecyclerView
     private var title = "Mode List"
     private val list = ArrayList<Hero>()
 
@@ -21,17 +21,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setActionBarTitle(title)
 
-        rvCategory = findViewById(R.id.rv_category)
-        rvCategory.setHasFixedSize(true)
+        rvHeroes = findViewById(R.id.rv_heroes)
+        rvHeroes.setHasFixedSize(true)
 
         list.addAll(HeroesData.listData)
         showRecyclerList()
     }
 
     private fun showRecyclerList() {
-        rvCategory.layoutManager = LinearLayoutManager(this)
+        rvHeroes.layoutManager = LinearLayoutManager(this)
         val listHeroAdapter = ListHeroAdapter(list)
-        rvCategory.adapter = listHeroAdapter
+        rvHeroes.adapter = listHeroAdapter
 
         listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Hero) {
@@ -41,17 +41,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showRecyclerGrid() {
-        rvCategory.layoutManager = GridLayoutManager(this, 2)
+        rvHeroes.layoutManager = GridLayoutManager(this, 2)
         val gridHeroAdapter = GridHeroAdapter(list)
-        rvCategory.adapter = gridHeroAdapter
+        rvHeroes.adapter = gridHeroAdapter
 
-        gridHeroAdapter.setOnItemClickCallback { data -> showSelectedHero(data) }
+        gridHeroAdapter.setOnItemClickCallback(object : GridHeroAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Hero) {
+                showSelectedHero(data)
+            }
+        })
     }
 
     private fun showRecyclerCardView() {
-        rvCategory.layoutManager = LinearLayoutManager(this)
+        rvHeroes.layoutManager = LinearLayoutManager(this)
         val cardViewHeroAdapter = CardViewHeroAdapter(list)
-        rvCategory.adapter = cardViewHeroAdapter
+        rvHeroes.adapter = cardViewHeroAdapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

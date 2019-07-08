@@ -10,19 +10,19 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import java.util.*
 
-class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adapter<ListHeroAdapter.CategoryViewHolder>() {
+class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adapter<ListHeroAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): CategoryViewHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_row_hero, viewGroup, false)
-        return CategoryViewHolder(view)
+        return ListViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, from, photo) = listHero[position]
 
         Glide.with(holder.itemView.context)
@@ -41,7 +41,7 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
     }
 
 
-    inner class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
         var tvFrom: TextView = itemView.findViewById(R.id.tv_item_from)
