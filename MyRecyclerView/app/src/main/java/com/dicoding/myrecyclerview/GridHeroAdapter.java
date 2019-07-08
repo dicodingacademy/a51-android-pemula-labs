@@ -16,10 +16,10 @@ public class GridHeroAdapter extends RecyclerView.Adapter<GridHeroAdapter.GridVi
     private ArrayList<Hero> listHero;
     private OnItemClickCallback onItemClickCallback;
 
-    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+    void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback;
     }
-    public GridHeroAdapter(ArrayList<Hero> list) {
+    GridHeroAdapter(ArrayList<Hero> list) {
         this.listHero = list;
     }
 

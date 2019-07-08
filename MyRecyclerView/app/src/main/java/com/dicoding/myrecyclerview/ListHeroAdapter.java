@@ -13,26 +13,27 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
-public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.CategoryViewHolder> {
+public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListViewHolder> {
     private ArrayList<Hero> listHero;
     private OnItemClickCallback onItemClickCallback;
 
-    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+    void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback;
     }
-    public ListHeroAdapter(ArrayList<Hero> list) {
+
+    ListHeroAdapter(ArrayList<Hero> list) {
         this.listHero = list;
     }
 
     @NonNull
     @Override
-    public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_row_hero, viewGroup, false);
-        return new CategoryViewHolder(view);
+        return new ListViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final CategoryViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Hero hero = listHero.get(position);
 
         Glide.with(holder.itemView.getContext())
@@ -57,11 +58,11 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.Catego
     }
 
 
-    class CategoryViewHolder extends RecyclerView.ViewHolder {
+    class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView tvName, tvFrom;
 
-        CategoryViewHolder(View itemView) {
+        ListViewHolder(View itemView) {
             super(itemView);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);

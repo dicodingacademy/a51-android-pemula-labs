@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private String title = "Mode List";
-    private RecyclerView rvCategory;
+    private RecyclerView rvHeroes;
     private ArrayList<Hero> list = new ArrayList<>();
 
     @Override
@@ -22,17 +22,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setActionBarTitle(title);
 
-        rvCategory = findViewById(R.id.rv_category);
-        rvCategory.setHasFixedSize(true);
+        rvHeroes = findViewById(R.id.rv_heroes);
+        rvHeroes.setHasFixedSize(true);
 
         list.addAll(HeroesData.getListData());
         showRecyclerList();
     }
 
     private void showRecyclerList() {
-        rvCategory.setLayoutManager(new LinearLayoutManager(this));
+        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
         ListHeroAdapter listHeroAdapter = new ListHeroAdapter(list);
-        rvCategory.setAdapter(listHeroAdapter);
+        rvHeroes.setAdapter(listHeroAdapter);
 
         listHeroAdapter.setOnItemClickCallback(new ListHeroAdapter.OnItemClickCallback() {
             @Override
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showRecyclerGrid() {
-        rvCategory.setLayoutManager(new GridLayoutManager(this, 2));
+        rvHeroes.setLayoutManager(new GridLayoutManager(this, 2));
         GridHeroAdapter gridHeroAdapter = new GridHeroAdapter(list);
-        rvCategory.setAdapter(gridHeroAdapter);
+        rvHeroes.setAdapter(gridHeroAdapter);
 
         gridHeroAdapter.setOnItemClickCallback(new GridHeroAdapter.OnItemClickCallback() {
             @Override
@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showRecyclerCardView() {
-        rvCategory.setLayoutManager(new LinearLayoutManager(this));
+        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
         CardViewHeroAdapter cardViewHeroAdapter = new CardViewHeroAdapter(list);
-        rvCategory.setAdapter(cardViewHeroAdapter);
+        rvHeroes.setAdapter(cardViewHeroAdapter);
     }
 
     @Override
