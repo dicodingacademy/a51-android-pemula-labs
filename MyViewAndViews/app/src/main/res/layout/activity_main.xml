@@ -25,7 +25,7 @@
                 style="@style/TextContent.Small.White"
                 android:layout_gravity="bottom"
                 android:layout_marginStart="16dp"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="16dp"
                 android:background="#4D000000"
                 android:drawableStart="@drawable/ic_collections_white_18dp"
                 android:drawablePadding="4dp"
@@ -37,19 +37,19 @@
 
         <TextView
             style="@style/TextContent.Black"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="@string/dummy_value"
             android:textSize="32sp" />
 
         <TextView
             style="@style/TextContent.Subtitle"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="16dp"
             android:text="@string/stock" />
 
         <TextView
             style="@style/TextContent"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="16dp"
             android:lineSpacingMultiplier="1"
             android:text="@string/content_text"
             android:textColor="@android:color/black" />
@@ -62,9 +62,9 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -117,9 +117,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
@@ -127,20 +127,18 @@
                 android:layout_height="56dp"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:src="@drawable/photo_2" />
 
             <TextView
                 style="@style/TextContent"
                 android:layout_toEndOf="@+id/profile_image"
-                android:layout_toRightOf="@id/profile_image"
                 android:text="@string/my_name"
                 android:textColor="@android:color/black" />
         </RelativeLayout>
 
         <Button
-            android:text="@string/buy"
-            style="@style/ButtonGeneral"/>
+            style="@style/ButtonGeneral"
+            android:text="@string/buy" />
 
     </LinearLayout>
 </ScrollView>
