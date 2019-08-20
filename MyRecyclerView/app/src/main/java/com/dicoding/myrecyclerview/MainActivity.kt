@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -87,7 +88,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setActionBarTitle(title: String) {
-        supportActionBar?.title = title
+        if (supportActionBar != null) {
+            (supportActionBar as ActionBar).title = title
+        }
     }
 
     private fun showSelectedHero(hero: Hero) {
