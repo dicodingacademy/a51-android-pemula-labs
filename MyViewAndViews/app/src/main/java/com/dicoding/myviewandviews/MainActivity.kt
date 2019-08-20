@@ -1,8 +1,8 @@
 package com.dicoding.myviewandviews
 
 import android.os.Bundle
-import android.support.v7.app.ActionBar
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         if (supportActionBar != null) {
             (supportActionBar as ActionBar).title = "Google Pixel"
-        }
+        }    
     }
 }
