@@ -8,5 +8,5 @@ Di dalamnya terdapat materi:
 * Style and Theme
 * RecyclerView
 
-Mari belajar Jetpack, tools yang bisa bikin level-up skill Android-mu. Materi disusun oleh **Dicoding sebagai Google Authorized Training Partner**.
+Mulailah karirmu sebagai Android Developer dari sini. Materi disusun oleh **Dicoding sebagai Google Authorized Training Partner**.
 Ikuti kelas [Belajar Membuat Aplikasi Android untuk Pemula](https://www.dicoding.com/academies/51/) di Dicoding Indonesia
