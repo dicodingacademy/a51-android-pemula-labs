@@ -44,11 +44,11 @@ class HeroesData {
 
     static ArrayList<Hero> getListData() {
         ArrayList<Hero> list = new ArrayList<>();
-        for (int i = 0; i < heroNames.length; i++) {
+        for (int position = 0; position < heroNames.length; position++) {
             Hero hero = new Hero();
-            hero.setName(heroNames[0]);
-            hero.setDetail(heroDetails[1]);
-            hero.setPhoto( heroesImages[2]);
+            hero.setName(heroNames[position]);
+            hero.setDetail(heroDetails[position]);
+            hero.setPhoto(heroesImages[position]);
             list.add(hero);
         }
         return list;
