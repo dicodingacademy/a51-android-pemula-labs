@@ -39,7 +39,7 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
                 .into(holder.imgPhoto);
 
         holder.tvName.setText(hero.getName());
-        holder.tvFrom.setText(hero.getFrom());
+        holder.tvDetail.setText(hero.getDetail());
 
         holder.btnFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,14 +73,14 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
 
     class CardViewViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
-        TextView tvName, tvFrom;
+        TextView tvName, tvDetail;
         Button btnFavorite, btnShare;
 
         CardViewViewHolder(View itemView) {
             super(itemView);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
-            tvFrom = itemView.findViewById(R.id.tv_item_from);
+            tvDetail = itemView.findViewById(R.id.tv_item_detail);
             btnFavorite = itemView.findViewById(R.id.btn_set_favorite);
             btnShare = itemView.findViewById(R.id.btn_set_share);
         }

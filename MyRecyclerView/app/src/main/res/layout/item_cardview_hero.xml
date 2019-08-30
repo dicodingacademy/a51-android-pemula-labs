@@ -39,7 +39,7 @@
             tools:text="@string/heroes_name" />
 
         <TextView
-            android:id="@+id/tv_item_from"
+            android:id="@+id/tv_item_detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/layout_button"
@@ -49,7 +49,7 @@
             android:layout_toEndOf="@id/img_item_photo"
             android:ellipsize="end"
             android:maxLines="5"
-            tools:text="@string/description" />
+            tools:text="@string/detail" />
 
         <LinearLayout
             android:id="@+id/layout_button"

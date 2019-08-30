@@ -2,8 +2,8 @@ package com.dicoding.myrecyclerview;
 
 public class Hero {
     private String name;
-    private String from;
-    private String photo;
+    private String detail;
+    private int photo;
 
     public String getName() {
         return name;
@@ -13,19 +13,19 @@ public class Hero {
         this.name = name;
     }
 
-    public String getFrom() {
-        return from;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
-    public String getPhoto() {
+    public int getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(int photo) {
         this.photo = photo;
     }
 }
