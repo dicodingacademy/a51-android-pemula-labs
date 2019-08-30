@@ -23,7 +23,7 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, from, photo) = listHero[position]
+        val (name, detail, photo) = listHero[position]
 
         Glide.with(holder.itemView.context)
                 .load(photo)
@@ -31,7 +31,7 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
                 .into(holder.imgPhoto)
 
         holder.tvName.text = name
-        holder.tvFrom.text = from
+        holder.tvDetail.text = detail
 
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listHero[holder.adapterPosition]) }
     }
@@ -44,7 +44,7 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvFrom: TextView = itemView.findViewById(R.id.tv_item_from)
+        var tvDetail: TextView = itemView.findViewById(R.id.tv_item_detail)
 
     }
 
