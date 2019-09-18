@@ -20,15 +20,15 @@ class CardViewHeroAdapter internal constructor(private val listHero: ArrayList<H
     }
 
     override fun onBindViewHolder(holder: CardViewViewHolder, position: Int) {
-        val (name, detail, photo) = listHero[position]
+        val hero = listHero[position]
 
         Glide.with(holder.itemView.context)
-                .load(photo)
+                .load(hero.photo)
                 .apply(RequestOptions().override(350, 550))
                 .into(holder.imgPhoto)
 
-        holder.tvName.text = name
-        holder.tvDetail.text = detail
+        holder.tvName.text = hero.name
+        holder.tvDetail.text = hero.detail
 
         holder.btnFavorite.setOnClickListener { Toast.makeText(holder.itemView.context, "Favorite " + listHero[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
 
