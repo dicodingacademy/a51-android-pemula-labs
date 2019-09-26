@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                 showRecyclerCardView()
             }
         }
+        setActionBarTitle(title)
     }
 
     private fun setActionBarTitle(title: String) {
