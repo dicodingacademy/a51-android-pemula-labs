@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 showRecyclerCardView();
                 break;
         }
+        setActionBarTitle(title);
     }
 
     private void setActionBarTitle(String title) {
