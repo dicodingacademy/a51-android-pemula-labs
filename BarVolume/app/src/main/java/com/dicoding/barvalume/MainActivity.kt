@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         if (v.id == R.id.btn_calculate) {
-            val inputLength = edtLength.text.toString().trim { it <= ' ' }
-            val inputWidth = edtWidth.text.toString().trim { it <= ' ' }
-            val inputHeight = edtHeight.text.toString().trim { it <= ' ' }
+            val inputLength = edtLength.text.toString().trim()
+            val inputWidth = edtWidth.text.toString().trim()
+            val inputHeight = edtHeight.text.toString().trim()
 
             var isEmptyFields = false
             var isInvalidDouble = false
