@@ -1,4 +1,4 @@
-## a129-jetpack-lab
+## a51-android-pemula-labs
 Repository ini berisi kode hasil dari codelab yang ada di **Semua modul di kelas Belajar Membuat Aplikasi Android untuk Pemula**.
 Di dalamnya terdapat materi:
 * Introduction
