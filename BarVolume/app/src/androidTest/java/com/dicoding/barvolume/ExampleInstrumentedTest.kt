@@ -1,4 +1,4 @@
-package com.dicoding.barvalume
+package com.dicoding.barvolume
 
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import androidx.test.platform.app.InstrumentationRegistry
