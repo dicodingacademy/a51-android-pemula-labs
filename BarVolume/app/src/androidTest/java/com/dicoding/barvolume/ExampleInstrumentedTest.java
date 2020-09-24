@@ -1,4 +1,4 @@
-package com.dicoding.barvalume;
+package com.dicoding.barvolume;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

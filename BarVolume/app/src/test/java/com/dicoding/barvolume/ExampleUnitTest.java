@@ -1,4 +1,4 @@
-package com.dicoding.barvalume;
+package com.dicoding.barvolume;
 
 import org.junit.Test;
 

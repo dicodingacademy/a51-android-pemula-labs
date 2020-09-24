@@ -1,4 +1,4 @@
-package com.dicoding.barvalume;
+package com.dicoding.barvolume;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         outState.putString(STATE_RESULT, tvResult.getText().toString());
     }
 
-
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_calculate) {
@@ -52,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String inputHeight = edtHeight.getText().toString().trim();
 
             boolean isEmptyFields = false;
-            boolean isInvalidDouble = false;
 
             if (TextUtils.isEmpty(inputLength)) {
                 isEmptyFields = true;
@@ -69,39 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 edtHeight.setError("Field ini tidak boleh kosong");
             }
 
-            Double length = toDouble(inputLength);
-            Double width = toDouble(inputWidth);
-            Double height = toDouble(inputHeight);
-
-            if (length == null) {
-                isInvalidDouble = true;
-                edtLength.setError("Field ini harus berupa nomer yang valid");
-            }
-
-            if (width == null) {
-                isInvalidDouble = true;
-                edtWidth.setError("Field ini harus berupa nomer yang valid");
-            }
-
-            if (height == null) {
-                isInvalidDouble = true;
-                edtHeight.setError("Field ini harus berupa nomer yang valid");
-            }
-
-            if (!isEmptyFields && !isInvalidDouble) {
-
-                double volume = length * width * height;
-
+            if (!isEmptyFields) {
+                double volume = Double.valueOf(inputLength) * Double.valueOf(inputWidth) * Double.valueOf(inputHeight);
                 tvResult.setText(String.valueOf(volume));
             }
-        }
-    }
-
-    private Double toDouble(String str) {
-        try {
-            return Double.valueOf(str);
-        } catch (NumberFormatException e) {
-            return null;
         }
     }
 }
