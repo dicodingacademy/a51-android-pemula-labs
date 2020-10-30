@@ -40,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:textColor="@android:color/black"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="@string/dummy_value"
@@ -62,8 +61,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:lineSpacingMultiplier="1"
-            android:text="@string/content_text"
-            android:textColor="@android:color/black" />
+            android:text="@string/content_text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -96,7 +94,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:layout_weight="1"
                     android:text="@string/content_specs_display" />
@@ -118,7 +115,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:text="@string/content_specs_size" />
             </TableRow>
@@ -139,7 +135,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:text="@string/content_specs_battery" />
             </TableRow>
@@ -174,8 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/profile_image"
-                android:text="@string/my_name"
-                android:textColor="@android:color/black" />
+                android:text="@string/my_name" />
         </RelativeLayout>
 
         <Button

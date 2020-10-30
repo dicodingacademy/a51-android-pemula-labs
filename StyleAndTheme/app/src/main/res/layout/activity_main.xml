@@ -33,7 +33,7 @@
         </FrameLayout>
 
         <TextView
-            style="@style/TextContent.Black"
+            style="@style/TextContent"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:text="@string/dummy_value"
@@ -48,8 +48,7 @@
             style="@style/TextContent"
             android:layout_marginBottom="16dp"
             android:lineSpacingMultiplier="1"
-            android:text="@string/content_text"
-            android:textColor="@android:color/black" />
+            android:text="@string/content_text" />
 
         <TextView
             style="@style/TextContent.Subtitle"
@@ -129,8 +128,7 @@
             <TextView
                 style="@style/TextContent"
                 android:layout_toEndOf="@+id/profile_image"
-                android:text="@string/my_name"
-                android:textColor="@android:color/black" />
+                android:text="@string/my_name" />
         </RelativeLayout>
 
         <Button
