@@ -1,7 +1,10 @@
-apply plugin: 'com.android.application'
 
+plugins {
+    id 'com.android.application'
+}
 android {
     compileSdkVersion 30
+    buildToolsVersion "30.0.2"
     defaultConfig {
         applicationId "com.dicoding.myintentapp"
         minSdkVersion 19
@@ -15,6 +18,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
