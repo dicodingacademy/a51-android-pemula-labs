@@ -1,6 +1,7 @@
 package com.dicoding.barvolume
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -53,20 +54,32 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             /*
             Validasi apakah inputan masih ada yang kosong
              */
-            when {
-                inputLength.isEmpty() -> {
-                    isEmptyFields = true
-                    edtLength.error = "Field ini tidak boleh kosong"
-                }
-                inputWidth.isEmpty() -> {
-                    isEmptyFields = true
-                    edtWidth.error = "Field ini tidak boleh kosong"
-                }
-                inputHeight.isEmpty() -> {
-                    isEmptyFields = true
-                    edtHeight.error = "Field ini tidak boleh kosong"
-                }
+            if (inputLength.isEmpty()) {
+                isEmptyFields = true
+                edtLength.error = "Field ini tidak boleh kosong"
             }
+            if (inputWidth.isEmpty()) {
+                isEmptyFields = true
+                edtWidth.error = "Field ini tidak boleh kosong"
+            }
+            if (inputHeight.isEmpty()) {
+                isEmptyFields = true;
+                edtHeight.error = "Field ini tidak boleh kosong"
+            }
+//            when {
+//                inputLength.isEmpty() -> {
+//                    isEmptyFields = true
+//                    edtLength.error = "Field ini tidak boleh kosong"
+//                }
+//                inputWidth.isEmpty() -> {
+//                    isEmptyFields = true
+//                    edtWidth.error = "Field ini tidak boleh kosong"
+//                }
+//                inputHeight.isEmpty() -> {
+//                    isEmptyFields = true
+//                    edtHeight.error = "Field ini tidak boleh kosong"
+//                }
+//            }
 
             /*
             Jika semua inputan valid maka tampilkan hasilnya
