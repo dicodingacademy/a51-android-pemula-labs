@@ -23,7 +23,7 @@
             android:layout_height="220dp"
             android:layout_marginBottom="4dp"
             android:scaleType="centerCrop"
-            tools:src="@color/colorAccent" />
+            tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tv_item_name"

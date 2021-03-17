@@ -11,5 +11,5 @@
         android:layout_height="250dp"
         android:layout_margin="1dp"
         android:scaleType="centerCrop"
-        tools:src="@color/colorAccent" />
+        tools:src="@tools:sample/avatars" />
 </LinearLayout>
