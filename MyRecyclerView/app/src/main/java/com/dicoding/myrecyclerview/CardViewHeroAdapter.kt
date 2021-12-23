@@ -14,8 +14,8 @@ import java.util.*
 
 class CardViewHeroAdapter internal constructor(private val listHero: ArrayList<Hero>) : RecyclerView.Adapter<CardViewHeroAdapter.CardViewViewHolder>() {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): CardViewViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_cardview_hero, viewGroup, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_hero, parent, false)
         return CardViewViewHolder(view)
     }
 

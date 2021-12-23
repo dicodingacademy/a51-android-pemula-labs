@@ -16,8 +16,8 @@ class GridHeroAdapter internal constructor(private val listHero: ArrayList<Hero>
         this.onItemClickCallback = onItemClickCallback
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): GridViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_grid_hero, viewGroup, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridViewHolder {
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_grid_hero, parent, false)
         return GridViewHolder(view)
     }
 
