@@ -27,8 +27,8 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
 
     @NonNull
     @Override
-    public ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_row_hero, viewGroup, false);
+    public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_hero, parent, false);
         return new ListViewHolder(view);
     }
 

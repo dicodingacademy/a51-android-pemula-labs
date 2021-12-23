@@ -24,8 +24,8 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
 
     @NonNull
     @Override
-    public CardViewViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_cardview_hero, viewGroup, false);
+    public CardViewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview_hero, parent, false);
         return new CardViewViewHolder(view);
     }
 
