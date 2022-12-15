@@ -1,5 +1,6 @@
 package com.dicoding.picodiploma.myintentapp
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -20,9 +21,16 @@ class MoveWithObjectActivity : AppCompatActivity() {
         /*
         Object parcelable bisa kita dapatkan dengan memanggil getParcelableExtra
          */
-        val person = intent.getParcelableExtra<Person>(EXTRA_PERSON) as Person
+        val person = if (Build.VERSION.SDK_INT >= 33) {
+            intent.getParcelableExtra(EXTRA_PERSON, Person::class.java)
+        } else {
+            @Suppress("DEPRECATION")
+            intent.getParcelableExtra(EXTRA_PERSON)
+        }
 
-        val text = "Name : ${person.name.toString()},\nEmail : ${person.email},\nAge : ${person.age},\nLocation : ${person.city}"
-        tvObject.text = text
+        if (person != null) {
+            val text = "Name : ${person.name.toString()},\nEmail : ${person.email},\nAge : ${person.age},\nLocation : ${person.city}"
+            tvObject.text = text
+        }
     }
 }

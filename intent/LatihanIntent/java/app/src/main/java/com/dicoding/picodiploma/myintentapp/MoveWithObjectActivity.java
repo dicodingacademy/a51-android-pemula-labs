@@ -1,5 +1,6 @@
 package com.dicoding.picodiploma.myintentapp;
 
+import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
@@ -17,7 +18,12 @@ public class MoveWithObjectActivity extends AppCompatActivity {
         /*
         Object parcelable bisa kita dapatkan dengan memanggil getParcelableExtra
          */
-        Person person = getIntent().getParcelableExtra(EXTRA_PERSON);
+        Person person;
+        if (Build.VERSION.SDK_INT >= 33) {
+            person = getIntent().getParcelableExtra(EXTRA_PERSON, Person.class);
+        } else {
+            person = getIntent().getParcelableExtra(EXTRA_PERSON);
+        }
 
         String text = "Name : " + person.getName() + ",\nEmail : " + person.getEmail() + ",\nAge : " + person.getAge() + ",\nLocation : " + person.getCity();
         tvObject.setText(text);
