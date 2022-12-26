@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
             val hero = Hero(dataName[i], dataDescription[i], dataPhoto.getResourceId(i, -1))
             listHero.add(hero)
         }
-        dataPhoto.recycle()
         return listHero
     }
 

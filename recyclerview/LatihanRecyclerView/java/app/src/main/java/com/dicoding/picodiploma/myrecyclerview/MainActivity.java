@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
             listHero.add(hero);
         }
-        dataPhoto.recycle();
         return listHero;
     }
 
