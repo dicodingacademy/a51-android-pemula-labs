@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="8dp"
+    android:layout_marginStart="8dp"
     android:layout_marginTop="4dp"
-    android:layout_marginRight="8dp"
+    android:layout_marginEnd="8dp"
     android:layout_marginBottom="4dp"
     card_view:cardCornerRadius="4dp">
 
@@ -19,11 +19,9 @@
 
         <ImageView
             android:id="@+id/img_item_photo"
-            android:layout_width="100dp"
+            android:layout_width="70dp"
             android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"

@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.dicoding.picodiploma.myrecyclerview.R;
 import com.dicoding.picodiploma.myrecyclerview.model.Hero;
+import com.dicoding.picodiploma.myrecyclerview.R;
 
 import java.util.ArrayList;
 
@@ -39,9 +39,7 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
         Hero hero = listHero.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(hero.getPhoto())
-                .circleCrop()
                 .into(holder.imgPhoto);
-
         holder.tvName.setText(hero.getName());
         holder.tvDescription.setText(hero.getDescription());
 
