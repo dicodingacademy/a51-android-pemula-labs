@@ -30,14 +30,14 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, description, photo) = listHero[position]
         Glide.with(holder.itemView.context)
-            .load(photo) // URL Gambar
-            .circleCrop() // Mengubah image menjadi lingkaran
-            .into(holder.imgPhoto) // imageView mana yang akan diterapkan
+            .load(photo)
+            .into(holder.imgPhoto)
         holder.tvName.text = name
         holder.tvDescription.text = description
         holder.itemView.setOnClickListener {
             onItemClickCallback.onItemClicked(listHero[holder.adapterPosition])
         }
+
     }
 
     override fun getItemCount(): Int = listHero.size
