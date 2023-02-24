@@ -40,9 +40,9 @@ class ListHeroAdapter(private val listHero: ArrayList<Hero>) : RecyclerView.Adap
     override fun getItemCount(): Int = listHero.size
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+        val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
+        val tvName: TextView = itemView.findViewById(R.id.tv_item_name)
+        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
     }
 
     interface OnItemClickCallback {
