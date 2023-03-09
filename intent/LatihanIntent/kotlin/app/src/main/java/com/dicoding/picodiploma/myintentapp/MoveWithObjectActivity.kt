@@ -22,10 +22,10 @@ class MoveWithObjectActivity : AppCompatActivity() {
         Object parcelable bisa kita dapatkan dengan memanggil getParcelableExtra
          */
         val person = if (Build.VERSION.SDK_INT >= 33) {
-            intent.getParcelableExtra(EXTRA_PERSON, Person::class.java)
+            intent.getParcelableExtra<Person>(EXTRA_PERSON, Person::class.java)
         } else {
             @Suppress("DEPRECATION")
-            intent.getParcelableExtra(EXTRA_PERSON)
+            intent.getParcelableExtra<Person>(EXTRA_PERSON)
         }
 
         if (person != null) {
