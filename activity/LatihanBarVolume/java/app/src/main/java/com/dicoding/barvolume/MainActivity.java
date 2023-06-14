@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.barvolume;
+package com.dicoding.barvolume;
 
 import android.os.Bundle;
 
