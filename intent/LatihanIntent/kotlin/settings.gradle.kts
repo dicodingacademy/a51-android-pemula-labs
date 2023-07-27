@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MyIntentApp"
-include ':app'
+include(":app")

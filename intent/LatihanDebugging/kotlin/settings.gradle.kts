@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MyTestingApp"
-include ':app'
+include(":app")
