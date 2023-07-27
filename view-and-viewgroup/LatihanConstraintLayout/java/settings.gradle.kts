@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "MyViewAndViewGroup"
-include ':app'
+rootProject.name = "MyConstraintView"
+include(":app")
