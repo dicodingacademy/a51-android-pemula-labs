@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "BarVolume"
-include ':app'
+include(":app")
