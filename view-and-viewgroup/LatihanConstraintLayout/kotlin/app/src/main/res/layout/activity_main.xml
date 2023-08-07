@@ -36,7 +36,6 @@
             android:elevation="2dp"
             android:padding="8dp"
             android:text="@string/dummy_photos"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@android:color/white"
             app:drawableLeftCompat="@drawable/ic_collections_white_18dp"
             app:drawableStartCompat="@drawable/ic_collections_white_18dp"
