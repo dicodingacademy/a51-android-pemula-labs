@@ -3,9 +3,11 @@
     <style name="Base.Theme.MyViewAndViewGroup" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gray</item>
+        <item name="colorPrimaryVariant">@color/gray_dark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/orange_light</item>
+        <item name="colorSecondaryVariant">@color/orange_dark</item>
         <item name="colorOnSecondary">@color/black</item>
     </style>
 
@@ -74,7 +76,7 @@
     </style>
 
     <style name="ButtonGeneral.SecondaryVariant">
-        <item name="android:backgroundTint">?attr/colorSecondaryVariant</item>
+        <item name="android:backgroundTint">@color/orange</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
     </style>

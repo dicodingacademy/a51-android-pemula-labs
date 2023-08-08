@@ -6,7 +6,8 @@
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/orange_light</item>
-        <item name="colorOnSecondary">@color/black</item>    </style>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
 
     <style name="TextContent">
         <item name="android:layout_width">wrap_content</item>

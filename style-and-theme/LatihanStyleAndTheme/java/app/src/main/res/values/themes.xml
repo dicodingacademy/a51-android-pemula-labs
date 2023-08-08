@@ -74,7 +74,7 @@
     </style>
 
     <style name="ButtonGeneral.SecondaryVariant">
-        <item name="android:backgroundTint">?attr/colorSecondaryVariant</item>
+        <item name="android:backgroundTint">@color/orange</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
