@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context="com.dicoding.picodiploma.myviewandviewgroup.MainActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,39 +20,35 @@
                 android:src="@drawable/pixel_google" />
 
             <TextView
-                style="@style/TextContent.Small.White"
+                style="@style/TextContent.BodyMedium.White.MarginAll"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
                 android:background="#4D000000"
-                android:drawableStart="@drawable/ic_collections_white_18dp"
                 android:drawablePadding="4dp"
                 android:gravity="center_vertical"
                 android:padding="8dp"
                 android:text="@string/dummy_photos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:drawableStart="@drawable/ic_collections_white_18dp" />
         </FrameLayout>
 
         <TextView
-            style="@style/TextContent"
+            style="@style/TextContent.HeadlineMedium.Bold"
             android:layout_marginTop="16dp"
-            android:text="@string/dummy_value"
-            android:textSize="32sp" />
+            android:layout_marginBottom="8dp"
+            android:text="@string/dummy_value" />
 
         <TextView
-            style="@style/TextContent.Subtitle"
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
             android:layout_marginBottom="16dp"
-            android:text="@string/stock" />
+            android:text="@string/title"/>
 
         <TextView
-            style="@style/TextContent"
+            style="@style/TextContent.BodyMedium.Gray.MarginLeftRight"
             android:layout_marginBottom="16dp"
             android:lineSpacingMultiplier="1"
-            android:text="@string/content_text"
-            android:textColor="@android:color/black" />
+            android:text="@string/content_text" />
 
         <TextView
-            style="@style/TextContent.Subtitle"
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
             android:layout_marginBottom="8dp"
             android:text="@string/specification" />
 
@@ -73,11 +65,13 @@
                 android:layout_marginBottom="8dp">
 
                 <TextView
-                    style="@style/TextSpec.Field"
+                    style="@style/TextContent.BodyMedium.Bold"
+                    android:layout_marginEnd="16dp"
                     android:text="@string/display" />
 
                 <TextView
-                    style="@style/TextSpec.Value"
+                    style="@style/TextContent.BodyMedium.Gray"
+                    android:layout_weight="1"
                     android:text="@string/content_specs_display" />
             </TableRow>
 
@@ -87,11 +81,13 @@
                 android:layout_marginBottom="8dp">
 
                 <TextView
-                    style="@style/TextSpec.Field"
+                    style="@style/TextContent.BodyMedium.Bold"
+                    android:layout_marginEnd="16dp"
                     android:text="@string/size" />
 
                 <TextView
-                    style="@style/TextSpec.Value"
+                    style="@style/TextContent.BodyMedium.Gray"
+                    android:layout_weight="1"
                     android:text="@string/content_specs_size" />
             </TableRow>
 
@@ -101,17 +97,19 @@
                 android:layout_marginBottom="8dp">
 
                 <TextView
-                    style="@style/TextSpec.Field"
+                    style="@style/TextContent.BodyMedium.Bold"
+                    android:layout_marginEnd="16dp"
                     android:text="@string/battery" />
 
                 <TextView
-                    style="@style/TextSpec.Value"
+                    style="@style/TextContent.BodyMedium.Gray"
+                    android:layout_weight="1"
                     android:text="@string/content_specs_battery" />
             </TableRow>
         </TableLayout>
 
         <TextView
-            style="@style/TextContent.Subtitle"
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
             android:layout_marginBottom="8dp"
             android:text="@string/seller" />
 
@@ -131,14 +129,14 @@
                 android:src="@drawable/photo_2" />
 
             <TextView
-                style="@style/TextContent"
+                style="@style/TextContent.BodyMedium.Gray"
                 android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/profile_image"
+                android:layout_toEndOf="@+id/profile_image"
                 android:text="@string/my_name" />
         </RelativeLayout>
 
         <Button
-            style="@style/ButtonGeneral"
+            style="@style/ButtonGeneral.SecondaryVariant"
             android:text="@string/buy" />
     </LinearLayout>
 </ScrollView>
