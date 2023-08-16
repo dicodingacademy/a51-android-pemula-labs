@@ -5,6 +5,7 @@
     <string name="description">Deskripsi</string>
     <string name="list">List</string>
     <string name="grid">Grid</string>
+    <string name="search">Pencarian</string>
 
     <string-array name="data_name">
         <item>Ahmad Dahlan</item>

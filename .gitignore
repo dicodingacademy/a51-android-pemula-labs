@@ -25,3 +25,6 @@ hs_err_pid*
 /.idea/
 .gradle/
 .idea/
+.DS_Store
+activity/.DS_Store
+activity/LatihanBarVolume/.DS_Store

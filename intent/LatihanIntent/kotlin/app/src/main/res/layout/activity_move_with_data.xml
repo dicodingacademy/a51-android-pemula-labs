@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context="com.dicoding.picodiploma.myintentapp.MoveWithDataActivity">
-
+    android:padding="16dp">
     <TextView
         android:id="@+id/tv_data_received"
         android:layout_width="match_parent"
