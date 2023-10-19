@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.RadioGroup
+import com.dicoding.picodiploma.myintentapp.R
 
 class MoveForResultActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var btnChoose: Button
@@ -25,8 +26,8 @@ class MoveForResultActivity : AppCompatActivity(), View.OnClickListener  {
         btnChoose.setOnClickListener(this)
     }
 
-    override fun onClick(v: View) {
-        if (v.id == R.id.btn_choose) {
+    override fun onClick(v: View?) {
+        if (v?.id == R.id.btn_choose) {
             if (rgNumber.checkedRadioButtonId > 0) {
                 var value = 0
                 when (rgNumber.checkedRadioButtonId) {
