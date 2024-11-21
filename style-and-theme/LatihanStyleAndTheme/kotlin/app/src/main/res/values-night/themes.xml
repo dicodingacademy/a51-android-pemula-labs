@@ -3,9 +3,11 @@
     <style name="Base.Theme.MyViewAndViewGroup" parent="Theme.Material3.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/gray_light</item>
+        <item name="colorPrimaryVariant">@color/gray</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/orange_light</item>
+        <item name="colorSecondaryVariant">@color/orange_light</item>
         <item name="colorOnSecondary">@color/black</item>
     </style>
 
