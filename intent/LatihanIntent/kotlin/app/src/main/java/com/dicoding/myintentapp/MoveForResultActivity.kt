@@ -1,12 +1,11 @@
 package com.dicoding.myintentapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.RadioGroup
-import com.dicoding.picodiploma.myintentapp.R
+import androidx.appcompat.app.AppCompatActivity
 
 class MoveForResultActivity : AppCompatActivity(), View.OnClickListener  {
     private lateinit var btnChoose: Button
